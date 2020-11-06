@@ -1,0 +1,47 @@
+.App {
+}
+
+.App-logo {
+    position: absolute;
+    animation: App-logo-spin infinite 20s linear;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.grid-container{
+  position: relative;
+  padding: 1em;
+  height: 70%;
+}
+
+.grid-cell{
+ border: 1px solid darkgray;
+  position: inherit;
+  display: inline-block;
+  margin: 0 0;
+}
+
+.cell-color-w{
+  background: aliceblue;
+}
+
+.cell-color-b{
+ background: black;
+}
+.is-ant{
+
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
