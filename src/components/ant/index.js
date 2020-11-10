@@ -16,6 +16,8 @@ const Ant = ({ objectsSize, center:{x=0,y=0} }) =>{
         ...initAntSettings
     });
     const [antsBites, setAntsBites ]= useState([]);
+    const  isEqualCoords =({ bottom, left }) => bottom === ant.coords.bottom && left === ant.coords.left;
+    const  isNotEqualCoords = (item)=> item.bottom !== ant.coords.bottom || item.left !== ant.coords.left;
 
     useEffect(()=>{
         ant.coords = {
@@ -27,15 +29,11 @@ const Ant = ({ objectsSize, center:{x=0,y=0} }) =>{
 
     useEffect(()=>{
         const antMoves = setInterval(function(){
-            const flagRotation = antsBites.some(
-                (item) => item.bottom === ant.coords.bottom && item.left === ant.coords.left
-            );
+            const flagRotation = antsBites.some(isEqualCoords);
             if(flagRotation){
                 setAntsBites(
                     antsBites
-                        .filter(
-                            (item)=> item.bottom !== ant.coords.bottom || item.left !== ant.coords.left
-                        )
+                        .filter(isNotEqualCoords)
                 );
             }else{
                 setAntsBites([{...ant.coords},...antsBites]);
