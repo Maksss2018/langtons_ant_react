@@ -1,13 +1,13 @@
 import React from 'react';
+import { Row } from 'reactstrap';
 import Ant from '../ant/';
 
 const AntFieldJsx = ({width=0, height=0, ...initialData}) =>(
-    <div style={{
-        width:`${width}px`,
-        height:`${height}px`,
+    <Row  style={{
+         height:`${height}px`,
     }}>
         <Ant {...initialData} />
-    </div>
+    </Row>
 );
 
 export default AntFieldJsx;
