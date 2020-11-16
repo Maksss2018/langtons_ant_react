@@ -12,6 +12,10 @@ const initAntSettings = {
 
 const Ant = ({ objectsSize, center:{x=0,y=0} }) =>{
     const correctionOf = ( trg )=> trg+objectsSize;
+    const initCenter = {
+        bottom: correctionOf(y),
+        left: correctionOf(x)
+    };
     const [ant, setAnt]= useState({
         ...initAntSettings
     });
@@ -20,10 +24,15 @@ const Ant = ({ objectsSize, center:{x=0,y=0} }) =>{
     const  isNotEqualCoords = (item)=> item.bottom !== ant.coords.bottom || item.left !== ant.coords.left;
 
     useEffect(()=>{
-        ant.coords = {
-            bottom: correctionOf(y),
-            left: correctionOf(x)
-            };
+        const { length } = antsBites;
+        if(length === 104){
+            ant.coords = initCenter;
+            setAnt(ant);
+        };
+    },[antsBites]);
+
+    useEffect(()=>{
+        ant.coords = initCenter;
         setAnt(ant);
     },[x,y]);
 
