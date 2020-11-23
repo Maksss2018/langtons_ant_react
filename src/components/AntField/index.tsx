@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import AntFieldJsx from './AntFieldJSX.js';
+import AntFieldJsx from './AntFieldJSX';
 import antField from '../../helpers/antField';
 
 const AntField = () => {

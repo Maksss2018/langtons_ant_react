@@ -28,7 +28,7 @@ const Ant = ({ objectsSize, center:{x=0,y=0} }) =>{
         if(length === 104){
             ant.coords = initCenter;
             setAnt(ant);
-        };
+        }
     },[antsBites]);
 
     useEffect(()=>{

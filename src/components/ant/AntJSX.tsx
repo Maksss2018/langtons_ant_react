@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import logo from "../../logo.svg";
 
 const AntJSX = ({ coords, objectsSize:size,antsBites=[] }) => (<span>

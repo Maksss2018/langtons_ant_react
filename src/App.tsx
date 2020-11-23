@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import '~/../bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from "./components/header";
 import AntField from "./components/AntField";
