@@ -1,4 +1,5 @@
-const direction = (str,{ bottom, left, objectsSize:stepSize })=>{
+type ParamsType = {bottom:number, left:number, objectsSize:number}
+const direction= (str:string,{ bottom, left, objectsSize:stepSize }:ParamsType)=>{
 
     if (str === "left") {
         return {left: left - stepSize, bottom};

@@ -2,7 +2,13 @@ import React from 'react';
 import { Row } from 'reactstrap';
 import Ant from '../ant/';
 
-const AntFieldJsx = ({width=0, height=0, ...initialData}) =>(
+interface Props {
+    width?:number | null,
+    height?: number | null,
+    initialData?: {objectsSize:number  | null, center:object}
+}
+
+const AntFieldJsx:React.FC<Props> = ({width=0, height=0, ...initialData}) =>(
     <Row  style={{
          height:`${height}px`,
     }}>

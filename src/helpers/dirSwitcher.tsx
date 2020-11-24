@@ -1,4 +1,4 @@
-const dirSwitcher = (str,flag)=>{
+const dirSwitcher = (str:string,flag:boolean)=>{
     if ((str === "right" || str === "left") && !flag) {
          return  str === "right" ? "bottom":"top";
     } else if ( (str === "right" || str === "left") && flag) {
